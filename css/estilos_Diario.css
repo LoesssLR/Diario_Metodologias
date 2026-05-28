@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+.lluvia-estrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.estrella {
+    position: absolute;
+    top: -100px;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    transform: rotate(35deg);
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translate(0, 0) rotate(35deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-60vw, 120vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+.bi-sun-fill {
+    color: orange;  
+}
+
+.bi-calendar {
+    color: rgba(138, 43, 226, 0.7);
+}
+
+header {
+    background: url('../img/galaxia.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    background-color: #333333; 
+    color: #e3e3e3; 
+    padding: 30px; 
+    text-align: center; 
+    font-size: 20px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-family: "Exo", serif;
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.7),
+                 0 0 7px rgba(255, 215, 0, 0.5),
+                 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+header p {
+    font-weight: bold;
+    font-family: "Lato", serif;
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.7),
+                 0 0 7px rgba(255, 215, 0, 0.5),
+                 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+.color-navbar {
+    background-color: #e3e3e3;
+}
+
+.nav-search {
+    position: relative;
+    min-width: 240px;
+}
+
+.nav-search-input {
+    border-radius: 20px;
+    padding-left: 32px;
+    padding-right: 12px;
+}
+
+.nav-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.nav-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    max-height: 240px;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+.nav-search-results .list-group-item {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+    .nav-search {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-search {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.container h2, .container p {
+    text-align: center; 
+    margin-top: 20px; 
+    color: #e3e3e3; 
+    font-family: "Lato", serif;
+}
+
+#carouselPlanetas {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 900px;
+}
+
+.carousel-item img {
+    object-fit: contain; /* Mantiene la proporción sin estirar */
+    height: 50vh;
+    padding: 20px;
+}
+
+#carouselPlanetas .carousel-caption {
+    bottom: 2%; 
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+    font-family: "Exo", serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 
+                 0 0 10px rgba(0, 0, 0, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4); /* Cambiado a oscuro para mejor lectura */
+}
+
+.carousel-caption p {
+    font-weight: bold;
+    font-family: "Lato", serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 
+                 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.text-center h2 {
+    font-weight: bold;
+    font-family: "Exo", serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                 0 0 10px rgba(255, 255, 255, 0.2),
+                 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.text-center p {
+    font-weight: bold;
+    font-family: "Lato", serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                 0 0 10px rgba(255, 255, 255, 0.2),
+                 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+    background: url('../img/galaxia.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    color: #e3e3e3; 
+    padding: 25px; 
+    text-align: center; 
+    font-size: 18px; 
+    margin-top: 25px;
+    box-shadow: 0px 0px 20px 5px rgba(138, 43, 226, 0.7);
+}
+
+footer p {
+    font-family: "Lato", serif;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.7),
+                 0 0 7px rgba(255, 215, 0, 0.5),
+                 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Pantallas Grandes */
+@media (min-width: 992px) and (min-height: 700px) {
+    header {
+        padding: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar {
+        margin-bottom: 12px !important;
+    }
+
+    .container h2, .container p {
+        margin-top: 12px;
+    }
+
+    .text-center.mt-4 {
+        margin-top: 12px !important;
+    }
+
+    footer {
+        padding: 16px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #carouselPlanetas {
+        margin-top: 10px;
+    }
+    
+    .carousel-item img {
+        height: 35vh; /* Reduce el tamaño para que no quede muy arriba */
+        padding: 10px;
+    }
+
+    .carousel-caption {
+        position: static; /* Coloca el texto de forma natural debajo de la imagen en móviles */
+        padding-bottom: 25px;
+        padding-top: 0;
+    }
+
+    .carousel-caption h5, .carousel-caption p {
+        text-shadow: none; /* Elimina sombras para lectura más limpia */
+        color: #e3e3e3; 
+    }
+}
