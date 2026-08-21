@@ -134,6 +134,12 @@ header p {
     }
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .container h2, .container p {
     text-align: center; 
     margin-top: 20px; 
